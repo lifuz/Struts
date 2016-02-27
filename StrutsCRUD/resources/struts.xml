@@ -5,6 +5,16 @@
 
 <struts>
 
+	<package name="default" extends="struts-default">
 
+		<action name="emp-*" class="com.lifuz.action.EmployeeAction"
+			method="{1}">
+
+			<result name="{1}">/emp-{1}.jsp</result>
+			<result name="success" type="redirectAction">emp-list</result>
+
+		</action>
+
+	</package>
 
 </struts>
