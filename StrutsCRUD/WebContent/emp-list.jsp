@@ -37,7 +37,7 @@
 					<td>${firstName }</td>
 					<td>${lastName }</td>
 					<td>${email }</td>
-					<td><a href="">edit</a></td>
+					<td><a href="emp-edit?empId=${empId }">edit</a></td>
 					<td><a href="emp-delete?empId=${empId }">delete</a></td>
 				</tr>
 			</s:iterator>

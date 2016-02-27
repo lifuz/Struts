@@ -25,22 +25,40 @@ public class EmployeeAction extends ActionSupport implements RequestAware,
 
 	private Dao dao = new Dao();
 
+	private Integer empId;
+
+	public void setEmpId(Integer empId) {
+		this.empId = empId;
+	}
+
 	public String list() {
 
 		request.put("emps", dao.getEmps());
-		
+
 		return "list";
 	}
 
 	public String delete() {
-		dao.delete(employee.getEmpId());
+		dao.delete(empId);
 
 		return SUCCESS;
 	}
-	
-	public String  save() {
-		
+
+	public String save() {
+
 		dao.add(employee);
+
+		return SUCCESS;
+	}
+
+	public String edit() {
+
+		return "edit";
+	}
+	
+	public String update() {
+		
+		dao.update(employee);
 		
 		return SUCCESS;
 	}
@@ -61,7 +79,13 @@ public class EmployeeAction extends ActionSupport implements RequestAware,
 	@Override
 	public Employee getModel() {
 
-		employee = new Employee();
+		if (empId == null) {
+
+			employee = new Employee();
+
+		} else {
+			employee = dao.get(empId);
+		}
 
 		return employee;
 	}

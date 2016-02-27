@@ -6,6 +6,8 @@
 <struts>
 
 	<package name="default" extends="struts-default">
+	
+		<default-interceptor-ref name="paramsPrepareParamsStack"/>
 
 		<action name="emp-*" class="com.lifuz.action.EmployeeAction"
 			method="{1}">
