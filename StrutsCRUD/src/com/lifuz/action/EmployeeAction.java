@@ -51,10 +51,18 @@ public class EmployeeAction extends ActionSupport implements RequestAware,
 
 		return SUCCESS;
 	}
+	
+	public void prepareSave() {
+		employee = new Employee();
+	}
 
 	public String edit() {
 
 		return "edit";
+	}
+	
+	public void prepareEdit() {
+		employee = dao.get(empId);
 	}
 	
 	public String update() {
@@ -62,6 +70,10 @@ public class EmployeeAction extends ActionSupport implements RequestAware,
 		dao.update(employee);
 		
 		return SUCCESS;
+	}
+	
+	public void prepareUpdate() {
+		employee = new Employee();
 	}
 
 	private Map<String, Object> request;
@@ -85,13 +97,6 @@ public class EmployeeAction extends ActionSupport implements RequestAware,
 
 	@Override
 	public void prepare() throws Exception {
-		if (empId == null) {
-
-			employee = new Employee();
-
-		} else {
-			employee = dao.get(empId);
-		}
 		
 	}
 

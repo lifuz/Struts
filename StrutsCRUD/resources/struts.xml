@@ -7,7 +7,15 @@
 
 	<package name="default" extends="struts-default">
 	
-		<default-interceptor-ref name="paramsPrepareParamsStack"/>
+		<interceptors>
+			 <interceptor-stack name="lifuzstack">
+		        <interceptor-ref name="paramsPrepareParamsStack">
+		            <param name="prepare.alwaysInvokePrepare">false</param>
+		        </interceptor-ref>
+		    </interceptor-stack>
+		</interceptors>
+	
+		<default-interceptor-ref name="lifuzstack"/>
 
 		<action name="emp-*" class="com.lifuz.action.EmployeeAction"
 			method="{1}">
