@@ -34,6 +34,13 @@
 			<result name="input">/index.jsp</result>
 
 		</action>
+		
+		<action name="collect" class="com.lifuz.action.CollectAction">
+			
+			<result name="success">/success.jsp</result>
+			<result name="input">/index.jsp</result>
+
+		</action>
 
 	</package>
 
