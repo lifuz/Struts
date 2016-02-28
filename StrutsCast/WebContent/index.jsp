@@ -11,7 +11,7 @@
 	
 	<s:form action="testConversion" theme="simple">
 	
-		<s:textfield name="age" label="Age"/>
+		age:<s:textfield name="age" label="Age"/>
 		${fieldErrors.age[0] }
 		<s:fielderror name="age"/>
 		<br><br>
