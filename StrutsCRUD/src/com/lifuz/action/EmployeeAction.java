@@ -8,6 +8,7 @@ import com.lifuz.bean.Employee;
 import com.lifuz.dao.Dao;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import com.opensymphony.xwork2.Preparable;
 
 /**
  * employee相关请求处理类
@@ -17,7 +18,7 @@ import com.opensymphony.xwork2.ModelDriven;
  * @时间：2016年2月27日
  */
 public class EmployeeAction extends ActionSupport implements RequestAware,
-		ModelDriven<Employee> {
+		ModelDriven<Employee>,Preparable {
 
 	private static final long serialVersionUID = 7956061635653409964L;
 
@@ -79,6 +80,11 @@ public class EmployeeAction extends ActionSupport implements RequestAware,
 	@Override
 	public Employee getModel() {
 
+		return employee;
+	}
+
+	@Override
+	public void prepare() throws Exception {
 		if (empId == null) {
 
 			employee = new Employee();
@@ -86,8 +92,7 @@ public class EmployeeAction extends ActionSupport implements RequestAware,
 		} else {
 			employee = dao.get(empId);
 		}
-
-		return employee;
+		
 	}
 
 }
