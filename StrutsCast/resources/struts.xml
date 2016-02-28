@@ -27,6 +27,13 @@
 			<result name="input">/index.jsp</result>
 
 		</action>
+		
+		<action name="complex" class="com.lifuz.action.ComplexPropertyAction">
+			
+			<result name="success">/success.jsp</result>
+			<result name="input">/index.jsp</result>
+
+		</action>
 
 	</package>
 
