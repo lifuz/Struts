@@ -9,9 +9,12 @@
 </head>
 <body>
 	
-	<s:form action="testConversion">
+	<s:form action="testConversion" theme="simple">
 	
 		<s:textfield name="age" label="Age"/>
+		${fieldErrors.age[0] }
+		<s:fielderror name="age"/>
+		<br><br>
 		<s:submit value="提交"/>
 	
 	</s:form>
