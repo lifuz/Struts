@@ -13,7 +13,50 @@
 	
 		age:<s:textfield name="age" label="Age"/>
 		${fieldErrors.age[0] }
-		<s:fielderror name="age"/>
+		<s:fielderror fieldName="age"/>
+		<br><br>
+		
+		Birth:<s:textfield name="birth"/>
+		<s:fielderror fieldName="birth"/>
+		
+		<br><br>
+		<s:submit value="提交"/>
+	
+	</s:form>
+	
+	<br><br>
+	
+	<h5> 测试使用ModelDriven 的方式使用类型转换器 </h5>
+	
+	<s:form action="testConversion2" theme="simple">
+	
+		age:<s:textfield name="age" label="Age"/>
+		${fieldErrors.age[0] }
+		<s:fielderror fieldName="age"/>
+		<br><br>
+		
+		Birth:<s:textfield name="birth"/>
+		<s:fielderror fieldName="birth"/>
+		
+		<br><br>
+		<s:submit value="提交"/>
+	
+	</s:form>
+	
+	<br><br>
+	
+	<h5> 基于类型的配置 </h5>
+	
+	<s:form action="testConversion2" theme="simple">
+	
+		age:<s:textfield name="age" label="Age"/>
+		${fieldErrors.age[0] }
+		<s:fielderror fieldName="age"/>
+		<br><br>
+		
+		Birth:<s:textfield name="birth"/>
+		<s:fielderror fieldName="birth"/>
+		
 		<br><br>
 		<s:submit value="提交"/>
 	

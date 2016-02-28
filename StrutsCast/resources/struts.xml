@@ -13,6 +13,20 @@
 			<result name="input">/index.jsp</result>
 
 		</action>
+		
+		<action name="testConversion2" class="com.lifuz.action.Conversion2Action">
+			
+			<result name="success">/success.jsp</result>
+			<result name="input">/index.jsp</result>
+
+		</action>
+		
+		<action name="testConversion2" class="com.lifuz.action.Conversion3Action">
+			
+			<result name="success">/success.jsp</result>
+			<result name="input">/index.jsp</result>
+
+		</action>
 
 	</package>
 
