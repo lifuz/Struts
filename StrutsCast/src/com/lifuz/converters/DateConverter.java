@@ -6,6 +6,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
+
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.util.StrutsTypeConverter;
 
 /**
@@ -20,8 +23,16 @@ public class DateConverter extends StrutsTypeConverter {
 	
 	private DateFormat df;
 	
-	public DateConverter() {
-		df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+	public DateFormat getDf() {
+		
+		if( df == null) {
+			ServletContext servletContext = ServletActionContext.getServletContext();
+			String pattern = servletContext.getInitParameter("pattern");
+			df = new SimpleDateFormat(pattern);
+			
+		}
+		
+		return df;
 	}
 
 	/**
@@ -34,7 +45,7 @@ public class DateConverter extends StrutsTypeConverter {
 			if (arg1 != null && arg1.length > 0) {
 				String value = arg1[0];
 				try {
-					return df.parseObject(value);
+					return getDf().parseObject(value);
 				} catch (ParseException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -55,7 +66,7 @@ public class DateConverter extends StrutsTypeConverter {
 		if (arg1 instanceof Date) {
 			Date date = (Date) arg1;
 			
-			return df.format(date);
+			return getDf().format(date);
 		}
 		
 		return null;

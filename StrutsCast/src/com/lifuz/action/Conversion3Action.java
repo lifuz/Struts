@@ -5,8 +5,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 /**
- * 测试自定义类型转换，第一种基于字段的配置中的ModelDriven中
- * 的字段
+ * 基于类型的配置
  *
  * @作者： 李富
  * @邮箱：lifuzz@163.com

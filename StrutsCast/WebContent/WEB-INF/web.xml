@@ -4,6 +4,11 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	
+	<context-param>
+		<param-name>pattern</param-name>
+		<param-value>yyyy-MM-dd hh:mm:ss</param-value>
+	</context-param>
+	
 	<!-- 配置struts2 拦截器 -->
 	<filter>
 		<filter-name>struts2</filter-name>
