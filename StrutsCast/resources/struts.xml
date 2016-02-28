@@ -6,8 +6,13 @@
 <struts>
 
 	<package name="default" extends="struts-default">
-	
-		
+
+		<action name="testConversion" class="com.lifuz.action.ConversionAction">
+			
+			<result name="success">/success.jsp</result>
+			<result name="input">/index.jsp</result>
+
+		</action>
 
 	</package>
 
