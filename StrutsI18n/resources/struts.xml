@@ -9,6 +9,12 @@
 	<constant name="struts.custom.i18n.resources" value="i18n"></constant>
 
 	<package name="default" extends="struts-default">
+	
+		<action name="i18n" class="com.lifuz.action.I18nAction">
+			
+			<result>/i18n.jsp</result>
+		
+		</action>
 
 
 	</package>
