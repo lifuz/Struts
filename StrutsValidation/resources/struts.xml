@@ -18,7 +18,7 @@
 		
 		<action name="validation2" class="com.lifuz.action.ValidationAction">
 			<result>/success.jsp</result>
-			<result name="input">/validation.jsp</result>
+			<result name="input">/validation2.jsp</result>
 		</action>
 	</package>
 

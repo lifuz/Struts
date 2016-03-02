@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-	<s:form action="validation" theme="simple">
+	<s:form action="validation2" theme="simple">
 		<s:textfield name="age" label="Age"/>
 		<s:fielderror fieldName="age"/>
 		<br><br>

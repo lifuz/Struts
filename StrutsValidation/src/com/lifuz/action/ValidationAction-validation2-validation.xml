@@ -6,8 +6,8 @@
    <!-- 针对age属性验证。基于字段验证 -->
    <field name="age">
    		<field-validator type="int">
-   			<param name="min">20</param>
-   			<param name="max">50</param>
+   			<param name="min">1</param>
+   			<param name="max">130</param>
    			<message key="error.int"></message>
    		</field-validator>
    </field>
