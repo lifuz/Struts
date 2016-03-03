@@ -6,7 +6,8 @@
 	<!-- 针对age属性验证。基于字段验证 -->
 	<field name="age">
 
-		<field-validator type="conversion">
+		<!-- 设置短路验证，如果当前验证不通过，则不进行一下验证 -->
+		<field-validator type="conversion" short-circuit="true">
 			<message>Conversion Error Occurred</message>
 		</field-validator>
 
