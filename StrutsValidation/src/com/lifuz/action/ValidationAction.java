@@ -11,6 +11,7 @@ public class ValidationAction extends ActionSupport {
 	private String passwd2;
 
 	private int count;
+	private String idCard;
 
 	public String getPasswd() {
 		return passwd;
@@ -42,6 +43,14 @@ public class ValidationAction extends ActionSupport {
 
 	public void setCount(int count) {
 		this.count = count;
+	}
+
+	public String getIdCard() {
+		return idCard;
+	}
+
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
 	}
 
 	@Override
