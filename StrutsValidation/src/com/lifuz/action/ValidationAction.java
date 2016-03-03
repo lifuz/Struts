@@ -10,6 +10,8 @@ public class ValidationAction extends ActionSupport {
 	private String passwd;
 	private String passwd2;
 
+	private int count;
+
 	public String getPasswd() {
 		return passwd;
 	}
@@ -32,6 +34,14 @@ public class ValidationAction extends ActionSupport {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
 	}
 
 	@Override

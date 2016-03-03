@@ -18,6 +18,16 @@
 		</field-validator>
 	</field>
 	
+	<!-- 针对age属性验证。基于字段验证 -->
+	<field name="count">
+
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">10</param>
+			<message key="error.int"></message>
+		</field-validator>
+	</field>
+	
 	<validator type="expression">
          <param name="expression"><![CDATA[passwd==passwd2]]></param>
          <message>passwd is not equals to passwd2</message>
