@@ -8,11 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<s:form action="validation" theme="simple">
+	<s:debug></s:debug>
+	<s:form action="validation" >
+		<s:actionerror/>
 		<s:textfield name="age" label="Age"/>
-		<s:fielderror fieldName="age"/>
-		<br><br>
+		<s:textfield name="passwd" label="Passwd"/>
+		<s:textfield name="passwd2" label="Passwd2"/>
 		<s:submit value="提交"/>
 	</s:form>
 	

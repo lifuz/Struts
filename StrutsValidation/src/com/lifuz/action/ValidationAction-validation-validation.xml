@@ -17,5 +17,10 @@
 			<message key="error.int"></message>
 		</field-validator>
 	</field>
+	
+	<validator type="expression">
+         <param name="expression"><![CDATA[passwd==passwd2]]></param>
+         <message>passwd is not equals to passwd2</message>
+      </validator>
 
 </validators>
