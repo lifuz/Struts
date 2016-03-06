@@ -10,6 +10,23 @@
 	<constant name="struts.custom.i18n.resources" value="i18n"></constant>
 
 	<package name="default" extends="struts-default">
+	
+	
+		<interceptors>
+		
+			<interceptor-stack name="lifuzstack">
+				<interceptor-ref name="defaultStack">
+					<param name="fileUpload.maximumSize">2097152</param>
+					<!--  	
+					<param name="fileUpload.allowedTypes">text/html,text/xml</param>
+					<param name="fileUpload.allowedExtensions">html,dtd,xml</param>
+					-->
+				</interceptor-ref>
+			</interceptor-stack>
+			
+		</interceptors>
+		
+		<default-interceptor-ref name="lifuzstack"></default-interceptor-ref>
 
 		<action name="upload" class="com.lifuz.action.UploadAction">
 			<result >/success.jsp</result>
