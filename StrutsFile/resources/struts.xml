@@ -14,6 +14,8 @@
 	
 		<interceptors>
 		
+			<interceptor name="hello" class="com.lifuz.interceptor.MyInterceptor"></interceptor>
+		
 			<interceptor-stack name="lifuzstack">
 				<interceptor-ref name="defaultStack">
 					<param name="fileUpload.maximumSize">2097152</param>
@@ -34,6 +36,8 @@
 		</action>
 		
 		<action name="token" class="com.lifuz.action.TokenAction">
+		
+			<interceptor-ref name="hello"></interceptor-ref>
 		
 			<!-- 测试tokenSession拦截器 -->
 			<interceptor-ref name="tokenSession"></interceptor-ref>
