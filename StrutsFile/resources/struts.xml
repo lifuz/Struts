@@ -33,6 +33,18 @@
 			<result name="input">/index.jsp</result>
 		</action>
 		
+		<action name="token" class="com.lifuz.action.TokenAction">
+		
+			<!-- 测试tokenSession拦截器 -->
+			<interceptor-ref name="tokenSession"></interceptor-ref>
+			<!-- 测试token拦截器 -->
+			<!-- <interceptor-ref name="token"></interceptor-ref> -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result >/success.jsp</result>
+			<result name="input">/token.jsp</result>
+			<result name="invalid.token">/token-error.jsp</result>
+		</action>
+		
 		<action name="download" class="com.lifuz.action.DownloadAction">
 			<result type="stream">
 				<param name="bufferSize">2048</param>
